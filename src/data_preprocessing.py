@@ -15,7 +15,7 @@ def load_and_preprocess_data():
         datasets_question = src["question"]
         datasets_answer = src["answer"]
 
-        texts = []
+        texts = [] # accommodate datasets here
 
         for context, question, answer in zip(datasets_context, datasets_question, datasets_answer):
             text = alpaca_prompt.format(context=context, question=question, answer=answer) + EOS_TOKEN
